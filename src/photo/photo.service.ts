@@ -21,4 +21,10 @@ export class PhotoService {
     }
     return this.resourceByPath.getResourceByPath('/photos');
   }
+
+  async findAllByFromTo(from?: number, to?: number): Promise<Photo[]> {
+      return this.resourceByPath.getResourceByPath(
+          `/photos?_start=${from}${to ? `&_end=${to}` : ''}`,
+      );
+  }
 }

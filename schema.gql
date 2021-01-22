@@ -13,4 +13,5 @@ type Photo {
 type Query {
   photo(id: Float!): Photo!
   getPhotos(albumId: Float): [Photo!]!
+  getPhotosByFromTo(to: Float, from: Float = 0): [Photo!]!
 }
