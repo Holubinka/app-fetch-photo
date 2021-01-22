@@ -1,0 +1,16 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Photo {
+  id: ID!
+  albumId: Float!
+  title: String!
+  url: String!
+  thumbnailUrl: String!
+}
+
+type Query {
+  photo(id: Float!): Photo!
+  getPhotos(albumId: Float): [Photo!]!
+}
