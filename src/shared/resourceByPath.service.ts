@@ -11,8 +11,6 @@ export class ResourceByPathService {
         'Content-Type': 'application/json',
       },
     });
-    res = await res.json();
-    console.log(res);
-    return res;
+    return  res.json();
   }
 }
